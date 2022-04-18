@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     id: index,
     user: {
       name: "5343543",
-      avatar: "5435"
+      avatar: "https://cdn.vuetifyjs.com/images/john.jpg"
     },
     content: "https://picsum.photos/1920",
     description: "testsetrseresrfsd",
@@ -14,11 +14,20 @@ router.get('/', function(req, res, next) {
     comments: [
       {
         author: {
-          name: "5343543",
+          name: "Bumbac Marin",
           avatar: "https://picsum.photos/200"
         },
-        content: "655464",
+        content: "Lorem ipsum stil dolore amet",
         likes: 6,
+        created_at: "12.12.2020"
+      },
+      {
+        author: {
+          name: "Crihan Mihai",
+          avatar: "https://picsum.photos/200"
+        },
+        content: "sa presupunem ca este un comentariu",
+        likes: 23,
         created_at: "12.12.2020"
       }
     ],
