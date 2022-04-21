@@ -35,4 +35,8 @@ router.get('/', function(req, res, next) {
   }))));
 });
 
+router.patch('/posts', (req, res) => {
+  console.log(req.user, req.body)
+});
+
 module.exports = router;
