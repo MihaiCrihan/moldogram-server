@@ -47,7 +47,7 @@ router.get("/", async (req, res) => {
 });
 
 router.patch("/:id", async (req, res) => {
-  await Posts.updateOne({ id: req.params.id }, req.body);
+  await Posts.updateOne({ _id: req.params.id }, req.body);
 
   res.sendStatus(200);
 });
