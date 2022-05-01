@@ -1,7 +1,8 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const Posts = new Schema({
+const Posts = new Schema(
+  {
     user: {
       name: "",
       avatar: ""
@@ -9,10 +10,10 @@ const Posts = new Schema({
     content: "",
     description: "",
     likes: 0,
-    comments: [
-    ],
+    comments: [],
     created_at: ""
   },
-{ versionKey: false })
+  { versionKey: false }
+);
 
-module.exports = mongoose.model('Posts', Posts)
+module.exports = mongoose.model("Posts", Posts);

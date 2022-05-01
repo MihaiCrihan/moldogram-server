@@ -3,16 +3,15 @@ const router = express.Router();
 const Messages = require("../models/Messages");
 
 const items = Array(10)
-    .fill(0)
-    .map((_, index) => ({
+  .fill(0)
+  .map((_, index) => ({
+    isOwner: 0,
+    messageContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  }));
 
-      isOwner: 0,
-      messageContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    }));
-
-router.get("/:id", function (req, res, next) {
+router.get("/:id", function(req, res, next) {
   res.send(
-      JSON.stringify(items.find((item) => item.id === Number(req.params.id)))
+    JSON.stringify(items.find(item => item.id === Number(req.params.id)))
   );
 });
 
