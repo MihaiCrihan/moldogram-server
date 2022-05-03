@@ -1,5 +1,10 @@
 const mongoose = require('mongoose')
 
 module.exports = () => {
-  mongoose.connect( "mongodb://mongo:123@mongodb:27017/app?authSource=admin"  )
+  mongoose.connect(
+    "mongodb+srv://admin123:B9IdD1RN24olr4Nk@cluster0.4mzcl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true
+    }
+  )
 }
