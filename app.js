@@ -7,8 +7,9 @@ const cors = require("cors");
 var indexRouter = require("./routes");
 var postsRouter = require("./routes/posts");
 var messagesRouter = require("./routes/messages");
-var usersRouter = require("./routes/oauth");
+var authRouter = require("./routes/oauth");
 var pushRouter = require("./routes/push");
+var usersRouter = require("./routes/users");
 
 var app = express();
 app.use(logger("dev"));
@@ -52,8 +53,9 @@ app.use((req, res, next) => {
 
 app.use("/", indexRouter);
 app.use("/posts", postsRouter(app));
-app.use("/oauth", usersRouter);
+app.use("/oauth", authRouter);
 app.use("/push", pushRouter);
 app.use("/messages", messagesRouter);
+app.use("/users", usersRouter(app));
 
 module.exports = app;
