@@ -11,12 +11,14 @@ module.exports = app => {
         await Users.create({
           name: "User 1",
           password: "12345678",
-          email: "user1@domain.com"
+          email: "user1@domain.com",
+          avatar: ""
         });
         await Users.create({
           name: "User 2",
           password: "12345678",
-          email: "user2@domain.com"
+          email: "user2@domain.com",
+          avatar: ""
         });
       }
 
