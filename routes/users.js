@@ -12,13 +12,13 @@ module.exports = app => {
           name: "User 1",
           password: "12345678",
           email: "user1@domain.com",
-          avatar: ""
+          avatar: "https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg"
         });
         await Users.create({
           name: "User 2",
           password: "12345678",
           email: "user2@domain.com",
-          avatar: ""
+          avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1OvsGEpcT7_KmNKMPG_lJeK60YqXCLsS4TeGyuqegdpGrWLu5HPbGANf3JwZdk0GJho8&usqp=CAU"
         });
       }
 
